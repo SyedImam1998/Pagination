@@ -11,7 +11,7 @@ function App() {
     const fetchData = async () => {
       const data = await axios.get("http://localhost:4000/getData/?page="+pageNum);
       console.log("data.data", data.data);
-      setData(data.data)
+      setData(data.data.data)
     };
 
     fetchData();
