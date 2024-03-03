@@ -10,7 +10,11 @@ app.get('/getData',(req,res,next)=>{
     const pageNumber= parseInt(req.query.page);
     console.log("pageNumber",pageNumber);
     const startIndex = (pageNumber - 1) * itemsPerPage;
+    // Mysql-- Offset= startIndex
+    // MongoDb -- skip= startIndex 
     const endIndex = pageNumber * itemsPerPage;
+    // Mysql-- limit= endIndex
+    // MongoDb -- limit= endIndex
     const paginatedData = data.slice(startIndex, endIndex);
     res.json(paginatedData);
 })
