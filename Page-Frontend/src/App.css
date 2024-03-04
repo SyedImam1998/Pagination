@@ -41,14 +41,15 @@
   color: #888;
 }
 
-.pagination{
+.pagination {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
-  gap:100px
+  gap: 100px;
 }
-.pagination label{
+.pagination .paginationBtn {
   display: block;
   cursor: pointer;
-
+  border: 1px solid green;
+  padding: 2%;
 }
